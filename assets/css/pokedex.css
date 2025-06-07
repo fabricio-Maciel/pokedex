@@ -30,6 +30,7 @@
 
   .detail {
     display: flex;
+    flex-grow: 1;
     align-items: center;
     justify-content: space-between;
 
@@ -78,16 +79,25 @@
   }
 }
 
-@media (min-width: 992px) {
-  .pokemons {
-    grid-template-columns: repeat(4, 1fr);
+@media (min-width: 376px) {
+  .content {
+    .pokemons {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
-
 @media (min-width: 576px) {
   .content {
     .pokemons {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    .pokemons {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
