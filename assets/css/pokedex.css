@@ -79,6 +79,76 @@
   }
 }
 
+.modal {
+  display: block;
+  color: #fff;
+  height: 400px;
+  width: 300px;
+  padding: 32px 16px;
+  border-radius: 36px;
+  box-shadow: 10px 10px 90px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+
+  .modal-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+
+    img {
+      max-width: 150px;
+      max-height: 150px;
+    }
+
+    .header-modal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .infos-modal {
+        display: flex;
+        flex-direction: column;
+
+        .name-modal {
+          text-transform: capitalize;
+          font-size: 1.6rem;
+          padding-bottom: 8px;
+        }
+
+        .type-modal {
+          display: inline-block;
+          align-self: flex-start;
+          filter: brightness(1.1);
+          text-transform: uppercase;
+          padding: 0.25rem 0.5rem;
+          margin-bottom: 32px;
+          font-size: 0.625rem;
+          border-radius: 1rem;
+        }
+      }
+
+      .number-modal {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.close-modal {
+  align-self: flex-start;
+  font-size: 2rem;
+  padding: 0 16px 16px 0;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (min-width: 376px) {
   .content {
     .pokemons {
@@ -86,6 +156,7 @@
     }
   }
 }
+
 @media (min-width: 576px) {
   .content {
     .pokemons {
